@@ -1,0 +1,74 @@
+
+*{
+	font-family: "Monserrat"
+}
+.list{
+	width: 300px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	list-style: none;
+	text-decoration: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.list *{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+.list-tag{
+	border-top: 1px solid #2980b9;
+	overflow: hidden;
+}
+.list-tag-header{
+	display: block;
+	color: white;
+	background: #34a4db;
+	padding: 16px 20px;
+	position: relative;
+}
+.list-tag-header:before{
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	background: #34a4db;
+	left: 20px;
+	bottom: -7px;
+	transform: rotate(45deg);
+}
+.list-tag-content{
+	background: #333;
+	overflow: hidden;
+	transition: max-height 0.75s;
+	max-height: 0;
+}
+.list-tag-content a{
+	display: block;
+	padding: 16px 26px;
+	color: white;
+	font-size: 14px;
+	margin: 4px 0;
+	position: relative;
+}
+.list-tag-content a:before{
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background: #34a4db;
+	left: 0;
+	top: 0;
+	transition: 0.3s;
+	opacity: 0;
+}
+.list-tag-content a:hover:before{
+	opacity: 1;
+}
+.list-tag:target .list-tag-content{
+	max-height: 100em;
+}
